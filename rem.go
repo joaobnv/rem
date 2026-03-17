@@ -40,6 +40,12 @@ func NewFile(data []byte) File {
 	return newBytesFile(data)
 }
 
+// NewFile creates a new File that reads from data.
+func NewFile2(data []byte) File {
+	return newBytesFile(data)
+}
+
+
 // NewFileFromString creates a new File that reads from str.
 func NewFileFromString(str string) File {
 	return newSeeker(strings.NewReader(str))
